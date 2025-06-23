@@ -16,7 +16,7 @@ Este proyecto implementa un sistema inteligente de control de acceso para una sa
 * **Sensor de huellas dactilares:** Modelos como el R305 o AS608, encargados de la lectura y verificación de las huellas.
 * **Firebase Realtime Database / Firestore:** Bases de datos NoSQL en la nube de Google, utilizadas para almacenar y gestionar los datos de los usuarios autorizados y los registros de acceso.
 
-##Partes agregadas
+##  Partes agregadas
 
 * Programación Orientada a Objetos (POO): Se eliminaron las funciones globales y se crearon clases dedicadas con responsabilidades únicas.
 * Se creó un "contrato" o interfaz llamada IUserService.
