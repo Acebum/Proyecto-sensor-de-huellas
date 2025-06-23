@@ -15,3 +15,10 @@ Este proyecto implementa un sistema inteligente de control de acceso para una sa
 * **ESP32:** Microcontrolador potente con conectividad Wi-Fi integrada, ideal para proyectos IoT.
 * **Sensor de huellas dactilares:** Modelos como el R305 o AS608, encargados de la lectura y verificación de las huellas.
 * **Firebase Realtime Database / Firestore:** Bases de datos NoSQL en la nube de Google, utilizadas para almacenar y gestionar los datos de los usuarios autorizados y los registros de acceso.
+
+##Partes agregadas
+
+* Programación Orientada a Objetos (POO): Se eliminaron las funciones globales y se crearon clases dedicadas con responsabilidades únicas.
+* Se creó un "contrato" o interfaz llamada IUserService.
+* Concurrencia con Hilos de Ejecución (std::thread): Se reemplazó la lógica secuencial del loop() por dos hilos que se ejecutan en paralelo: uno para escanear huellas y otro para recibir comandos por el puerto serie.
+* Sincronización para Seguridad (std::mutex): Se introdujo un "candado" o mutex para proteger las operaciones críticas (como abrir la puerta o registrar un usuario).
