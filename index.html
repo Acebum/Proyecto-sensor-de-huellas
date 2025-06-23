@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Control de Acceso</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+  <div id="auth-container">
+    <h2>Acceso al Panel</h2>
+    <input type="email" id="email" placeholder="Correo Electrónico">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button id="loginBtn">Iniciar Sesión</button>
+    <p id="authMessage"></p>
+  </div>
+
+  <div id="app-container" style="display:none;">
+    <header>
+      <h1>Panel de Control de Acceso</h1>
+      <nav>
+        <button id="showPersonsBtn">Gestionar Personas</button>
+        <button id="showLogsBtn">Ver Registros</button>
+        <button id="logoutBtn">Cerrar Sesión</button>
+      </nav>
+    </header>
+    <div id="content"></div>
+  </div>
+
+  <!-- Modal de Edición de Persona -->
+  <div id="personModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3>Editar Persona</h3>
+      <input type="hidden" id="personKeyInput">
+      <input type="text" id="personNameInput" placeholder="Nombre Completo">
+      <input type="text" id="personSemesterInput" placeholder="Semestre">
+      <input type="number" id="personFingerprintIdInput" placeholder="ID Huella" readonly>
+      <button id="savePersonBtn">Guardar Cambios</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
